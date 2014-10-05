@@ -1,0 +1,27 @@
+{
+  "name": "world-data",
+  "version": "0.0.0",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "Element providing solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "world-data.html",
+  "license": "MIT",
+  "homepage": "https://github.com/<USERNAME>/world-data/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.4.1"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^0.7.3"
+  }
+}
