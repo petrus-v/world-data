@@ -1,7 +1,7 @@
 world-data
 ============
 
-See the [component page](http://polymerlabs.github.io/world-data) for more information.
+See the [component page](http://petrus-v.github.io/world-data) for more information.
 
 ## Getting Started
 
