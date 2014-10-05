@@ -37,36 +37,6 @@
     window.addEventListener('polymer-ready', function(e) {
       var world = document.querySelector('world-data');
       console.log(world.world);
-      var newWorld = {};
-      newWorld.viewBox = world.world.viewBox;
-      newWorld.continents = {};
-      world.world.continents.forEach(function(continent){
-        newWorld.continents[continent.continent_code] = {'viewBox': continent.viewBox,
-                                                         'code': continent.continent_code};
-        var names = {};
-        continent.names.forEach(function(name){
-          names[name.lang] = name.value.trim();
-        });
-        var countries = {};
-        continent.countries.forEach(function(country){
-          countries[country.country_code] = {};
-          countries[country.country_code] = {'code': country.country_code,
-                                             'continent_code': continent.continent_code}
-          if (country.path){
-            countries[country.country_code].path = country.path;
-          }
-          var country_names = {};
-          country.names.forEach(function(name){
-            country_names[name.lang] = name.value.trim();
-          });
-          countries[country.country_code].name = country_names;
-        });
-        newWorld.continents[continent.continent_code].name = names;
-        newWorld.continents[continent.continent_code].countries = countries;
-      });
-      console.log(newWorld);
-      console.log(JSON.stringify(newWorld));
-
     });
 
   </script>
