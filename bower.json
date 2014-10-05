@@ -2,18 +2,20 @@
   "name": "world-data",
   "version": "0.0.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Pierre Verkest <pierreverkest84@gmail.com>"
   ],
-  "description": "Element providing solution to no problem in particular.",
+  "description": "Element providing data about world.",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
-    "seed"
+    "world-data",
+    "world",
+    "svg",
   ],
   "main": "world-data.html",
-  "license": "MIT",
-  "homepage": "https://github.com/<USERNAME>/world-data/",
+  "license": "AGPL",
+  "homepage": "https://github.com/petrus-v/world-data/",
   "ignore": [
     "/.*",
     "/tests/"
