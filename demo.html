@@ -41,7 +41,8 @@
       newWorld.viewBox = world.world.viewBox;
       newWorld.continents = {};
       world.world.continents.forEach(function(continent){
-        newWorld.continents[continent.continent_code] = {'viewBox': continent.viewBox};
+        newWorld.continents[continent.continent_code] = {'viewBox': continent.viewBox,
+                                                         'code': continent.continent_code};
         var names = {};
         continent.names.forEach(function(name){
           names[name.lang] = name.value.trim();
@@ -49,7 +50,8 @@
         var countries = {};
         continent.countries.forEach(function(country){
           countries[country.country_code] = {};
-          //countries[country.country_code] = {'code': country.country_code}
+          countries[country.country_code] = {'code': country.country_code,
+                                             'continent_code': continent.continent_code}
           if (country.path){
             countries[country.country_code].path = country.path;
           }
