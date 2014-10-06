@@ -37,6 +37,23 @@
     window.addEventListener('polymer-ready', function(e) {
       var world = document.querySelector('world-data');
       console.log(world.world);
+      var newWorld = {};
+      newWorld.viewBox = world.world.viewBox;
+      var continents = [];
+      for ( key in world.world.continents){
+        var continent = world.world.continents[key];
+        var newcontinent = {}
+        newcontinent.name = continent.name;
+        newcontinent.viewBox = continent.viewBox;
+        newcontinent.countries = [];
+        newcontinent.code = continent.code;
+        for(countryCode in continent.countries){
+          newcontinent.countries.push(continent.countries[countryCode]);
+        }
+        continents.push(newcontinent);
+      };
+      newWorld.continents = continents;
+      console.log(JSON.stringify(newWorld));
     });
 
   </script>
